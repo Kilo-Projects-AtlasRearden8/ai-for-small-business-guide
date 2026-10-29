@@ -1,0 +1,159 @@
+:root {
+  --bg: #faf7f0;
+  --paper: #ffffff;
+  --ink: #29231c;
+  --muted: #726657;
+  --accent: #a65a3c;
+  --accent-dark: #8c472a;
+  --line: #e6dcc9;
+  --soft: #f1eadc;
+  --green: #4c6b42;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.wrap { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  padding: 28px 0 20px;
+}
+.logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+.site-title { font-size: 1.35rem; font-weight: 700; margin: 6px 0 4px; color: var(--ink); letter-spacing: 0.02em; }
+.site-tag { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+.site-nav { background: var(--soft); border-bottom: 1px solid var(--line); }
+.site-nav .wrap { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 10px 0; align-items: center; }
+.site-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.92rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.site-nav a:hover, .site-nav a:focus { background: var(--line); outline: 2px solid var(--accent); outline-offset: -2px; }
+.site-nav a[aria-current="page"] { background: var(--accent); color: #fff; border-radius: 4px; }
+.nav-sep { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; padding: 4px 0; }
+
+main { padding: 30px 0 70px; }
+article { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 32px 36px; }
+
+h1 { font-family: Georgia, "Times New Roman", serif; font-size: 1.9rem; margin: 0 0 8px; color: var(--accent-dark); line-height: 1.25; }
+h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.5rem; margin: 32px 0 10px; color: var(--accent-dark); border-bottom: 2px solid var(--soft); padding-bottom: 6px; }
+h3 { font-size: 1.15rem; margin: 24px 0 8px; color: var(--ink); }
+p { margin: 0 0 14px; }
+ul, ol { margin: 8px 0 16px; padding-left: 22px; }
+li { margin: 4px 0; }
+hr { border: none; border-top: 1px solid var(--line); margin: 26px 0; }
+blockquote {
+  border-left: 4px solid var(--accent);
+  background: var(--soft);
+  padding: 12px 18px;
+  margin: 16px 0;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.9em; background: var(--soft); padding: 1px 5px; border-radius: 3px; color: #8a3f1e; }
+pre { background: #f0e8d7; border: 1px solid var(--line); border-radius: 8px; padding: 14px 18px; overflow-x: auto; }
+pre code { background: none; padding: 0; color: var(--ink); font-size: 0.92em; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+th { background: var(--soft); color: var(--accent-dark); font-weight: 700; }
+tr:nth-child(even) td { background: var(--soft); }
+
+.print-btn {
+  float: right;
+  margin: 0 0 16px 16px;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.print-btn:hover { background: var(--accent-dark); }
+
+.site-footer {
+  margin-top: 40px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.site-footer p { margin: 0; }
+
+/* ---------- Planners ---------- */
+.planner-set { display: flex; flex-direction: column; gap: 26px; }
+.planner {
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  padding: 22px 26px;
+  background: var(--paper);
+  page-break-inside: avoid;
+}
+.planner h1 { margin-top: 0; font-size: 1.6rem; border-bottom: 3px solid var(--ink); padding-bottom: 8px; }
+.planner h2 { border-bottom: 1px solid var(--line); padding-bottom: 4px; margin-top: 20px; }
+.field {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: baseline;
+}
+.field label { flex: 0 0 150px; font-weight: 700; color: var(--ink); }
+.rule { flex: 1; border-bottom: 1px solid var(--ink); height: 1.2em; }
+.mini-rule { flex: 0 0 110px; border-bottom: 1px solid var(--ink); height: 1.2em; }
+ul { list-style: disc; margin: 10px 0 16px 20px; }
+li { margin: 6px 0; }
+.check { list-style: none; padding-left: 0; }
+.check li::before { content: "☐ "; margin-right: 6px; color: var(--accent); font-weight: 700; }
+
+/* ---------- Landing ---------- */
+.hero { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 40px 36px; margin-bottom: 30px; }
+.hero h1 { font-size: 2.1rem; margin: 0 0 12px; }
+.hero p { font-size: 1.05rem; margin: 0 0 18px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.card h3 { margin-top: 0; color: var(--accent-dark); }
+.card p { font-size: 0.92rem; color: var(--muted); margin: 8px 0 0; }
+.card a { color: var(--accent); text-decoration: underline; }
+.cta { margin-top: 30px; }
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.btn:hover { background: var(--accent-dark); }
+
+/* ---------- Print ---------- */
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  .site-header, .site-nav, .site-footer, .no-print, .print-btn { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  main { padding: 0; }
+  article { border: none; padding: 0; box-shadow: none; }
+  h1, h2, h3 { color: #000 !important; page-break-after: avoid; }
+  a { text-decoration: none; color: #000; }
+  .planner { border-color: #000; page-break-inside: auto; page-break-before: always; }
+  .field .rule, .field .mini-rule { border-bottom-color: #000; }
+}
