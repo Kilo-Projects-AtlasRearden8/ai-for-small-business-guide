@@ -1,0 +1,14 @@
+{
+  "name": "draft_invoice_reminder",
+  "description": "Drafts a short, polite invoice-reminder email for a small business.",
+  "version": "0.1.0",
+  "author": "Asdale Dynamics, LLC",
+  "inputs": {
+    "customer": "Fake customer name (never a real customer)",
+    "invoice": "Invoice number (use an example, not a real invoice)",
+    "due": "Due date, e.g. 2026-11-15",
+    "amount": "Amount owed, e.g. 120.00"
+  },
+  "output": "Draft email body (plain text)",
+  "safety": "Use example/fake data only. Never real customer or financial data."
+}
